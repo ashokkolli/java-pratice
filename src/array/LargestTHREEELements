@@ -1,0 +1,82 @@
+////Given an array with all distinct elements, find the largest three elements. Expected time complexity is O(n) and extra space is O(1).
+//
+//package array;
+//
+//import org.testng.annotations.Test;
+//
+//public class LargestTHREEELements {
+//
+////	public static void main(String[] args) {
+////		// TODO Auto-generated method stub
+////
+////		//int arr[] = {12, 13, 1, 10, 34, 1};
+////		//int arr[] = {12, 12, 12, 12, 12, 12};
+////		int arr[] = {12, 12, -1, -1, -1, -1};
+////
+////        int n = arr.length;
+////        print2largest(arr, n);
+////	}
+//
+//	@Test
+//	public void testing() {
+//		// TODO Auto-generated method stub
+//
+//		//int arr[] = {12, 13, 1, 10, 34, 1};
+//		//int arr[] = {12, 12, 12, 12, 12, 12};
+//		int arr[] = {12, 12, -1, -1, -1, -1};
+//
+//        int n = arr.length;
+//        print2largest(arr, n);
+//	}
+//
+//
+//
+//	 /* Function to print three largest elements */
+//    void print2largest(int arr[], int arr_size)
+//    {
+//        int i, first, second, third;
+//
+//        /* There should be atleast two elements */
+//        if (arr_size < 3)
+//        {
+//            System.out.print(" Invalid Input ");
+//            return;
+//        }
+//
+//        third = first = second = Integer.MIN_VALUE;
+//        for (i = 0; i < arr_size ; i ++)
+//        {
+//            /* If current element is smaller than
+//            first*/
+//            if (arr[i] > first)
+//            {
+//                third = second;
+//                second = first;
+//                first = arr[i];
+//            }
+//
+//            /* If arr[i] is in between first and
+//            second then update second  */
+//            else if (arr[i] > second && arr[i]!=first)
+//            {
+//                third = second;
+//                second = arr[i];
+//            }
+//
+//            else if (arr[i] > third && arr[i]!=second && arr[i]!=first)
+//                third = arr[i];
+//        }
+//
+//        System.out.println("Three largest elements are ");
+//        System.out.println(first);
+//        if(second==Integer.MIN_VALUE)
+//        	System.out.println("No Second Large Value");
+//        else
+//        	System.out.println(second);
+//        if(third==Integer.MIN_VALUE)
+//        	System.out.println("No Third Large Value");
+//        else
+//        	System.out.println(third);
+//
+//    }
+//}
