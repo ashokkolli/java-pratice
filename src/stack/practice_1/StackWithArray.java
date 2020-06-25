@@ -6,17 +6,17 @@ package stack.practice_1;
 
 public class StackWithArray {
 
-    private static final int size = 5;
-    private static final int[] stackArr = new int[size];
+    private static final int SIZE = 5;
+    private static final int[] stackArr = new int[SIZE];
     private static int top = -1;
 
     public static boolean isEmpty() {
-        return top == size - 1;
+        return top == SIZE - 1;
     }
 
     public static int push(int x) {
         if (isEmpty()) {
-            System.out.println("Stack Overflow");
+            System.out.println("Error: Stack Overflow");
             return -1;
         } else {
             top++;
@@ -28,11 +28,11 @@ public class StackWithArray {
 
     public static int peek() {
         if (top == -1) {
-            System.out.println("stack is underflow");
+            System.out.println("Error: Stack is underflow");
             return -1;
         } else {
-            int pop = stackArr[top];
-            return pop;
+            return stackArr[top];
+
         }
     }
 
