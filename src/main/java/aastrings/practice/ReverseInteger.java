@@ -36,11 +36,30 @@ public class ReverseInteger {
 
     }
 
+    public static void typeUserName(String userName) {
+        for (char ch : userName.toCharArray()) {
+
+            switch (ch) {
+                case '0':
+                    System.out.println("0");
+                case '1':
+
+                    System.out.println("1");
+
+                case '2':
+
+                    System.out.println("3");
+
+            }
+        }
+    }
 
     public static void main(String[] args) {
-        System.out.println(Integer.MAX_VALUE);
+     /*   System.out.println(Integer.MAX_VALUE);
         int n = 1;
         int opt = reverse(n);
-        System.out.println(opt);
+        System.out.println(opt);*/
+        System.out.println("abc".charAt(0));
+
     }
 }
