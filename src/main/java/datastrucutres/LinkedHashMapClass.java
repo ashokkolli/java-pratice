@@ -1,9 +1,9 @@
-package DS;
+package datastrucutres;
 
 import java.util.*;
 import java.util.Map.Entry;
 
-public class HashMapClass {
+public class LinkedHashMapClass {
     public static void main(String[] args) {
         HashMap<Integer, String> hm = new HashMap<Integer, String>();
         //Default Capacity is 16

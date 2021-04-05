@@ -1,4 +1,4 @@
-package LinkedList;
+package linkedlist;
 
 public class DLL_Push_Append_Insert_Before_After {
 

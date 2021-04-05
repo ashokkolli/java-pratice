@@ -1,4 +1,4 @@
-package LinkedList;
+package linkedlist;
 
 public class DetectAndRemoveLoop {
     static Node head;

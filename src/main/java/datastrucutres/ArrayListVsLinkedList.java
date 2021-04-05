@@ -1,4 +1,4 @@
-package DS;
+package datastrucutres;
 
 import java.util.ArrayList;
 import java.util.LinkedList;

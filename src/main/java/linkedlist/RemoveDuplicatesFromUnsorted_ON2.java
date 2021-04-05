@@ -1,6 +1,6 @@
-package LinkedList;
+package linkedlist;
 
-public class RemoveDuplicatesFromUnsorted_ONLOGN {
+public class RemoveDuplicatesFromUnsorted_ON2 {
 
     // Java program to remove duplicates from unsorted
 // linked list
@@ -9,7 +9,7 @@ public class RemoveDuplicatesFromUnsorted_ONLOGN {
     static Node head;
 
     public static void main(String[] args) {
-        RemoveDuplicatesFromUnsorted_ONLOGN list = new RemoveDuplicatesFromUnsorted_ONLOGN();
+        RemoveDuplicatesFromUnsorted_ON2 list = new RemoveDuplicatesFromUnsorted_ON2();
         head = new Node(10);
         head.next = new Node(12);
         head.next.next = new Node(11);

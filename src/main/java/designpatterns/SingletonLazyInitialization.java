@@ -1,4 +1,4 @@
-package JavaConcepts.Singleton;
+package designpatterns;
 
 public class SingletonLazyInitialization {
 

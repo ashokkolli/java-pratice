@@ -1,4 +1,4 @@
-package LinkedList;
+package linkedlist;
 //https://www.geeksforgeeks.org/reverse-a-linked-list/
 
 public class ReverseLL {

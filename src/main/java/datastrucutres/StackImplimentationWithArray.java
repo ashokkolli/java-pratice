@@ -1,7 +1,7 @@
 //https://www.geeksforgeeks.org/stack-data-structure-introduction-program/
 
 
-package DS;
+package datastrucutres;
 
 public class StackImplimentationWithArray {
 

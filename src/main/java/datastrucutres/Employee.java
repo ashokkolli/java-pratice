@@ -1,4 +1,4 @@
-package DS;
+package datastrucutres;
 
 public class Employee {
     String name;

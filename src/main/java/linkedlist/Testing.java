@@ -1,4 +1,4 @@
-package LinkedList;
+package linkedlist;
 
 public class Testing {
 // Java program for reversing the linked list

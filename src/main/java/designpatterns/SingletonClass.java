@@ -1,4 +1,4 @@
-package JavaConcepts.Singleton;
+package designpatterns;
 
 public class SingletonClass {
     private static final SingletonClass singletonClass = new SingletonClass();

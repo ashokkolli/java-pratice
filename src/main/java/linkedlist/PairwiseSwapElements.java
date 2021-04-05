@@ -1,6 +1,6 @@
 //https://www.geeksforgeeks.org/pairwise-swap-elements-of-a-given-linked-list/
 
-package LinkedList;
+package linkedlist;
 
 public class PairwiseSwapElements {
     // Java program to pairwise swap elements of a linked list
