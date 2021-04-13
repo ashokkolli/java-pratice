@@ -11,7 +11,7 @@ import java.util.List;
  * Created by Ashok Kolli on 3/29/2021
  */
 
-public class CollectionKing {
+public class ArrayListTest {
     List<String> list = new ArrayList<>();
     List<String> list2 = new ArrayList<>();
 
