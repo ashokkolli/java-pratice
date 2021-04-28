@@ -55,6 +55,18 @@ public class ArrayListTest {
     }
 
     @Test
+    public void remove() {
+        list.remove(1);
+
+    }
+
+    @Test
+    public void set() {
+        list.set(1, "Setting");
+        System.out.println(list);
+    }
+
+    @Test
     public void sublist() {
         System.out.println(list2.subList(0, 2));
     }
@@ -65,5 +77,11 @@ public class ArrayListTest {
         System.out.println(list2);
     }
 
-
+    @Test
+    public void convertArrayToList() {
+        Integer[] arr = {1, 2, 3, 4};
+        List<Integer> list = new ArrayList<>();
+        Collections.addAll(list, arr);
+        System.out.println(list);
+    }
 }
