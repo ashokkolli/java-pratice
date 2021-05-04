@@ -1,4 +1,4 @@
-package azqae.arrays;
+package amazon.arrays;
 
 /**
  * Created by Ashok Kolli on 4/29/2021

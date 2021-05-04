@@ -1,4 +1,4 @@
-package azqae;
+package amazon;
 
 /**
  * Created by Ashok Kolli on 4/29/2021

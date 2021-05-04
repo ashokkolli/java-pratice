@@ -1,4 +1,4 @@
-package azqae.arrays;
+package amazon.arrays;
 
 import java.util.ArrayList;
 import java.util.HashSet;
