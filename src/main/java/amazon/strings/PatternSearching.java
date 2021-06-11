@@ -13,7 +13,7 @@ public class PatternSearching {
 
         String text = "TechabTechabTech";
         String patt = "Tech";
-        patt1(text, patt);
+        patt(text, patt);
     }
 
     public static List<Integer> patt(String text, String patt) {
