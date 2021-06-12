@@ -1,4 +1,4 @@
-package amazon;
+package amazon.collections;
 
 /**
  * Created by Ashok Kolli on 4/27/2021
