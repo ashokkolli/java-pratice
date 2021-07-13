@@ -1,8 +1,5 @@
-package apple.arrays;
+package apple.strings;
 
-
-import java.util.LinkedHashMap;
-import java.util.Map;
 
 public class LongestSubString {
     public static void bf(){
