@@ -10,7 +10,6 @@ public class AllAnagramsInString {
     public static void main(String[] args) {
         String s = "abab", p = "ab";
         System.out.println(findAnagrams(s, p));
-
     }
 
     public static List<Integer> findAnagrams(String s, String p) {
