@@ -1,4 +1,4 @@
-package apple.strings;
+package apple.strings.slidingwindow;
 
 import java.util.HashMap;
 import java.util.List;
@@ -14,7 +14,7 @@ public class AllAnagramsInString {
     public static List<Integer> findAnagrams(String s, String p) {
         int ns = s.length(), np = p.length();
         if (ns < np)
-            return new ArrayList();
+            return new ArrayList<Integer>();
 
         Map<Character, Integer> pCount = new HashMap<>();
         Map<Character, Integer> sCount = new HashMap<>();
