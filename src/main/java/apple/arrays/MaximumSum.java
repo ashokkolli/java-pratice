@@ -27,13 +27,11 @@ public class MaximumSum {
         //initialize variables with first element
         int currentSumSubArr = arr[0];
         int maxSumSubArr = arr[0];
-
         //int[] arr = {-2,1,-3,4,-1,2,1,-5,4};
-
         //Start with the 2nd element since we already used first element
         for(int i = 1; i < arr.length; i++){
             int num = arr[i];
-            //if current Subarray is negative, throw it away, otherwise keep adding it.
+            //if current Sub array is negative, throw it away, otherwise keep adding it.
             currentSumSubArr = Math.max(num, currentSumSubArr + num);
             maxSumSubArr  =  Math.max(maxSumSubArr, currentSumSubArr );
         }

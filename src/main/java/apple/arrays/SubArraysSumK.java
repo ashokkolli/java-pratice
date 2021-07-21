@@ -9,44 +9,36 @@ public class SubArraysSumK {
         int[] arr = { 3, 4, 7, 2, -3,  1, 4, 2 };
         int sum = 7;
         int n = arr.length;
-        System.out.println(findSubarraySum(arr, n, sum));
+        System.out.println(findSubArraySum(arr, n, sum));
     }
-    static int findSubarraySum(int[] arr, int n, int sum)
+    static int findSubArraySum(int[] arr, int n, int sum)
     {
-        // HashMap to store number of subarrays
+        // HashMap to store number of sub Arrays
         // starting from index zero having
         // particular value of sum.
         Map<Integer, Integer> prevSum = new HashMap<>();
-
         int res = 0;
-
         // Sum of elements so far.
-        int currsum = 0;
-
+        int currSum = 0;
         for (int i = 0; i < n; i++) {
-
             // Add current element to sum so far.
-            currsum += arr[i];
-
-            // If currsum is equal to desired sum,
-            // then a new subarray is found. So
-            // increase count of subarrays.
-            if (currsum == sum)
+            currSum += arr[i];
+            // If currSum is equal to desired sum,
+            // then a new sub array is found. So
+            // increase count of sub arrays.
+            if (currSum == sum)
                 res++;
-
-            // currsum exceeds given sum by currsum
-            //  - sum. Find number of subarrays having
-            // this sum and exclude those subarrays
-            // from currsum by increasing count by
+            // currSum exceeds given sum by currSum
+            //  - sum. Find number of sub arrays having
+            // this sum and exclude those sub arrays
+            // from currSum by increasing count by
             // same amount.
-            if (prevSum.containsKey(currsum - sum))
-                res += prevSum.get(currsum - sum);
-
-            // Add currsum value to count of
+            if (prevSum.containsKey(currSum - sum))
+                res += prevSum.get(currSum - sum);
+            // Add currSum value to count of
             // different values of sum.
-                prevSum.put(currsum, prevSum.getOrDefault(currsum, 0) + 1);
+                prevSum.put(currSum, prevSum.getOrDefault(currSum, 0) + 1);
         }
-
         return res;
     }
 
@@ -63,7 +55,6 @@ public class SubArraysSumK {
             int  sum = 0;
             for (int j = i; j < arr.length; j++) {
                 sum = sum  + arr[j];
-
                 if (sum == k) {
                     count++;
                     break;
