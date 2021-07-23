@@ -1,11 +1,9 @@
 package apple.generic;
 
 public class MyPower {
-
     public static void main(String[] args){
         System.out.println(myPow(9,3));
     }
-
     public static long  myPow(int x, int n){
         if(n == 0)
             return  1;

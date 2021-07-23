@@ -18,7 +18,6 @@ public class MaximumSum {
                 currentSubArraySum += arr[j];
                 maxSum = Math.max(maxSum, currentSubArraySum);
             }
-
         }
         return maxSum;
     }
