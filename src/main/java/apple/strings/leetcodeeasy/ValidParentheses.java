@@ -1,4 +1,4 @@
-package apple.arrays.medium;
+package apple.strings.leetcodeeasy;
 
 import java.util.HashMap;
 import java.util.Stack;
