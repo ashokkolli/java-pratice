@@ -4,6 +4,7 @@ public class BestTimeToBuyAndSellStocks {
 
     public static void main(String[] args) {
         int[] prices = {7,1,5,3,6,4};
+        maxProfit_bt(prices);
     }
     public static int maxProfit_bt(int[] arr){
         int maxProfit = 0;
@@ -13,6 +14,7 @@ public class BestTimeToBuyAndSellStocks {
                 maxProfit = Math.max(maxProfit, profit);
             }
         }
+        System.out.println(maxProfit);
         return maxProfit;
     }
 
