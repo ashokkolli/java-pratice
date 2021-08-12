@@ -11,7 +11,7 @@ import java.util.Map;
  * Created by Ashok Kolli on 4/4/2021
  */
 
-public class Strings {
+public class Apple {
 
     public static void main(String[] args) {
 
