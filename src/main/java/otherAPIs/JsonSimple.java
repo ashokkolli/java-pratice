@@ -37,6 +37,7 @@ public class JsonSimple {
         System.out.println(lastName);
         System.out.println(l);
 
+
         Map address = (Map) jo.get("address");
         Iterator<Map.Entry> itr = address.entrySet().iterator();
         while (itr.hasNext()) {
@@ -64,7 +65,7 @@ public class JsonSimple {
         jo.put("firstName", "John");
         jo.put("lastName", "Smith");
         jo.put("age", 25);
-
+      //You have to create Linked HashMap because JSONArray is ordered collection - preserves the order
         Map map = new LinkedHashMap<>(4);
         map.put("streetAddress", "21 2nd Street");
         map.put("city", "New York");

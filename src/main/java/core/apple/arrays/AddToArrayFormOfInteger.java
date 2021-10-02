@@ -28,4 +28,20 @@ public class AddToArrayFormOfInteger {
         return  list;
     }
 
+    public static List<Integer> addToArrayFormOfInteger_practice(int[] arr,int k){
+        int len = arr.length;
+        List<Integer> outputList = new ArrayList<>();
+        for(int i = len -1 ; i >=0; i--){
+            int sum = k + arr[i];
+            outputList.add(sum%10);
+            k = k/10;
+        }
+        while(k!=0){
+            outputList.add(k%10);
+            k = k/10;
+        }
+        Collections.reverse(outputList);
+        return outputList;
+    }
+
 }
