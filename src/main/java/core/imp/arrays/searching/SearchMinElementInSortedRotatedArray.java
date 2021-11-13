@@ -1,22 +1,18 @@
-package core.searching;
+package core.imp.arrays.searching;
 
 public class SearchMinElementInSortedRotatedArray {
-
 
     public static void main(String[] args) {
         int[] arr = {3, 4, 5, 6, 7, 8, 1, 2};
         int key = 5;
         int len = arr.length;
         pivotedBinarySearch(arr, len, key);
-
     }
 
     public static void pivotedBinarySearch(int[] arr, int n, int key) {
         int keyIndex = -1;
         int minElement = findPivot(arr, 0, n - 1);
         System.out.println("Min ele ment is is : " + arr[minElement]);
-
-
     }
 
     public static int findPivot(int[] arr, int l, int r) {

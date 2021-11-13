@@ -1,4 +1,4 @@
-package core.searching.practice;
+package core.imp.arrays.searching.practice;
 
 /**
  * Created by Ashok Kolli on 1/19/2021

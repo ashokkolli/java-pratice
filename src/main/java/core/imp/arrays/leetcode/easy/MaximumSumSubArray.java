@@ -2,7 +2,6 @@ package core.imp.arrays.leetcode.easy;
 
 public class MaximumSumSubArray {
 
-
     public static void main(String[] args) {
         int[] nums =  {-2,1,-3,4,-1,2,1,-5,4};
         maximumSumSubArray(nums);
@@ -38,9 +37,9 @@ public class MaximumSumSubArray {
     3. Return maxSubarray.
     * */
     public static int maximumSumSubArray(int[] num){
-        int max_sum = num[0];
-        int curr_sum = num[0];
-        for(int i = 1; i <  num.length; i++){
+        int max_sum = Integer.MIN_VALUE;
+        int curr_sum = 0;
+        for(int i = 0; i <  num.length; i++){
             curr_sum = Math.max(num[i], curr_sum+num[i]);
             max_sum = Math.max(curr_sum, max_sum);
 

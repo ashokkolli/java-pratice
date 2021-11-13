@@ -1,4 +1,4 @@
-package core.searching;
+package core.imp.arrays.searching;
 
 public class BinarySearch {
 
@@ -12,7 +12,6 @@ public class BinarySearch {
             System.out.println("Element not present");
         else
             System.out.println("Element present at Index : " + i);
-
 
     }
 
@@ -31,5 +30,22 @@ public class BinarySearch {
         }
         return -1;
 
+    }
+
+    public int binarySearch_practice(int[] arr, int key){
+        int len = arr.length;
+        int l = 0;
+        int r = len -1 ;
+        while(l <= r){
+            int m = (l + r)/2;
+            if(m == key)
+                return m;
+            else if(key < arr[m]){
+                l++;
+            }else
+                r++;
+        }
+
+        return len;
     }
 }

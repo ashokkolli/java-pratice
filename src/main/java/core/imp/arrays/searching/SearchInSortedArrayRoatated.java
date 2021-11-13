@@ -1,4 +1,4 @@
-package core.searching;
+package core.imp.arrays.searching;
 
 public class SearchInSortedArrayRoatated {
     public static void main(String[] args) {
@@ -12,6 +12,7 @@ public class SearchInSortedArrayRoatated {
     public static void pivotedBinarySearch(int[] arr, int n, int key) {
         int keyIndex = -1;
         int pivotIndex = findPivot(arr, 0, n - 1);
+
         System.out.println("pivot index is : " + pivotIndex);
         if (key == arr[pivotIndex]) {
             System.out.println("Key Index is : " + pivotIndex);
