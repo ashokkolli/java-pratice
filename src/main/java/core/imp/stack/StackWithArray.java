@@ -1,4 +1,4 @@
-package core.stack;
+package core.imp.stack;
 
 public class StackWithArray {
     int top;
@@ -51,7 +51,7 @@ public class StackWithArray {
 
     public boolean isEmpty() {
         if (top == -1) {
-            System.out.println("core.stack is underflow");
+            System.out.println("core.imp.stack is underflow");
             return true;
         } else {
             System.out.println("Stack is not empty");
@@ -63,7 +63,7 @@ public class StackWithArray {
 
     public boolean isFull() {
         if (stack.length == top - 1) {
-            System.out.println("core.stack is overflow");
+            System.out.println("core.imp.stack is overflow");
             return true;
         } else {
             System.out.println("Stack is not full");

@@ -1,4 +1,4 @@
-package core.stack;
+package core.imp.stack;
 
 public class ReverseAStackWithOutExtraSpace {
 
@@ -37,7 +37,7 @@ public class ReverseAStackWithOutExtraSpace {
         return s;
     }
 
-    // prints contents of core.stack
+    // prints contents of core.imp.stack
     public void display() {
         StackNode s = this.top;
         while (s != null) {
@@ -47,7 +47,7 @@ public class ReverseAStackWithOutExtraSpace {
         System.out.println();
     }
 
-    // Reverses the core.stack using simple
+    // Reverses the core.imp.stack using simple
     // linked list reversal logic.
     public void reverse() {
         StackNode prev, cur, succ;

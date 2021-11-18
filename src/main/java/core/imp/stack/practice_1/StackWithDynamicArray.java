@@ -1,4 +1,4 @@
-package core.stack.practice_1;
+package core.imp.stack.practice_1;
 
 /**
  * Created by Ashok Kolli on 6/24/2020
@@ -80,7 +80,7 @@ public class StackWithDynamicArray {
 
     public static int pop() {
         if (isEmpty()) {
-            System.out.println("core.stack is underflow");
+            System.out.println("core.imp.stack is underflow");
             return -1;
         } else {
             int pop = stackArr[top];

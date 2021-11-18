@@ -1,4 +1,4 @@
-package core.stack.practice_1;
+package core.imp.stack.practice_1;
 
 import java.awt.*;
 import java.util.HashMap;
@@ -55,7 +55,7 @@ public class StackWithArray {
 
     public static int pop() {
         if (isEmpty()) {
-            System.out.println("core.stack is underflow");
+            System.out.println("core.imp.stack is underflow");
             return -1;
         } else {
             int pop = stackArr[top];

@@ -1,4 +1,4 @@
-package core.windowsliding;
+package core.imp.windowsliding;
 
 /**
  * Created by Ashok Kolli on 7/26/2020

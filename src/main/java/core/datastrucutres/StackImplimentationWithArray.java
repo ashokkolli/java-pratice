@@ -5,7 +5,7 @@ package core.datastrucutres;
 
 public class StackImplimentationWithArray {
 
-    /* Java program to implement basic core.stack
+    /* Java program to implement basic core.imp.stack
     operations */
     static final int MAX = 1000;
     int top;
@@ -25,7 +25,7 @@ public class StackImplimentationWithArray {
             return false;
         } else {
             a[++top] = x;
-            System.out.println(x + " pushed into core.stack");
+            System.out.println(x + " pushed into core.imp.stack");
             return true;
         }
     }
@@ -48,6 +48,6 @@ class Main {
         s.push(10);
         s.push(20);
         s.push(30);
-        System.out.println(s.pop() + " Popped from core.stack");
+        System.out.println(s.pop() + " Popped from core.imp.stack");
     }
 }

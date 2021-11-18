@@ -1,4 +1,4 @@
-package core.stack;
+package core.imp.stack;
 
 public class TwoStacksInArray {
 
@@ -57,7 +57,7 @@ public class TwoStacksInArray {
         }
     }
 
-    // Method to pop an element from first core.stack
+    // Method to pop an element from first core.imp.stack
     int pop1() {
         if (top1 == -1) {
             System.out.println("Stack Underflow");
@@ -68,7 +68,7 @@ public class TwoStacksInArray {
         return 0;
     }
 
-    // Method to pop an element from second core.stack
+    // Method to pop an element from second core.imp.stack
     int pop2() {
         if (top2 == size) {
             System.out.println("Stack Underflow");

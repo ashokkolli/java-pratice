@@ -1,4 +1,4 @@
-package core.stack;
+package core.imp.stack;
 
 import static java.lang.System.exit;
 
@@ -34,14 +34,14 @@ public class StackWithLinkedList {
     // create globle top reference variable
     // Constructor
 
-    // Utility function to add an element x in the core.stack
+    // Utility function to add an element x in the core.imp.stack
     public void push(int x) // insert at the beginning
     {
         // create new node temp and allocate memory
         Node newNode = new Node(x);
 
-        // check if core.stack (heap) is full. Then inserting an
-        // element would lead to core.stack overflow
+        // check if core.imp.stack (heap) is full. Then inserting an
+        // element would lead to core.imp.stack overflow
         if (newNode == null) {
             System.out.print("\nHeap Overflow");
             return;
@@ -54,14 +54,14 @@ public class StackWithLinkedList {
         top = newNode;
     }
 
-    // Utility function to check if the core.stack is empty or not
+    // Utility function to check if the core.imp.stack is empty or not
     public boolean isEmpty() {
         return top == null;
     }
 
-    // Utility function to return top element in a core.stack
+    // Utility function to return top element in a core.imp.stack
     public int peek() {
-        // check for empty core.stack
+        // check for empty core.imp.stack
         if (!isEmpty()) {
             return top.data;
         } else {
@@ -70,12 +70,12 @@ public class StackWithLinkedList {
         }
     }
 
-    // Utility function to pop top element from the core.stack
+    // Utility function to pop top element from the core.imp.stack
     public int pop() // remove at the beginning
     {
         Node tempNode;
         int topData;
-        // check for core.stack underflow
+        // check for core.imp.stack underflow
         if (top == null) {
             System.out.print("\nStack Underflow");
             return -1;
@@ -88,7 +88,7 @@ public class StackWithLinkedList {
     }
 
     public void display() {
-        // check for core.stack underflow
+        // check for core.imp.stack underflow
         if (top == null) {
             System.out.printf("\nStack Underflow");
             exit(1);
