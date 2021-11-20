@@ -7,6 +7,7 @@ public class MaxAndMinElementInArray {
 
 
         int[] arr = {10, 100, 50, 30, 40, 120, 160};
+        practice(arr);
         int len = arr.length;
         ArrayList<Integer> list = maxelement(arr, len);
 
@@ -22,7 +23,7 @@ public class MaxAndMinElementInArray {
         int min = arr[0];
         ArrayList<Integer> list = new ArrayList<Integer>();
         if (arr == null || len < 2) {
-            System.out.println("core.array length should be atleaset 2");
+            System.out.println("core.array length should be at leaset 2");
         }
         for (int i = 1; i < len; i++) {
             if (arr[i] >= max) {
@@ -37,5 +38,20 @@ public class MaxAndMinElementInArray {
 
 
         return list;
+    }
+
+    public static void practice(int[] arr){
+        int max = arr[0];
+        int min = arr[0];
+        for(int n : arr){
+            if(n <= min){
+                min = n;
+            }
+            if(n >= max)
+                max = n;
+        }
+        System.out.println(min);
+        System.out.println(max);
+
     }
 }

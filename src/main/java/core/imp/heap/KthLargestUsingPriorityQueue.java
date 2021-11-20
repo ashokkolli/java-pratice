@@ -14,25 +14,38 @@ package core.imp.heap;
 
 import java.util.PriorityQueue;
 
-public class KthMinUsingMinHeap {
+public class KthLargestUsingPriorityQueue {
+
+
+    //https://stackoverflow.com/questions/30072077/priority-queue-ordering-of-elements
+    //https://leetcode.com/problems/kth-largest-element-in-an-array/solution/
+
 
     public static void main(String[] args) {
-        int[] arr = {3, 2, 1, 5, 6};
+        int[] arr = {3, 2, 1, 5, 6, 0};
         int k = 2;
-        int smallest = kthSmallest(arr, k);
-        System.out.println(smallest);
+
+     /*   PriorityQueue<Integer> pr = new PriorityQueue<Integer>(k);
+        for(int ele : arr) {
+            pr.add(ele);
+            System.out.println(pr);
+        }
+*/
+
+        PriorityQueue<Integer> pr = kLargest(arr, k);
+        for (int i = 0; i < k; i++) {
+            System.out.println(pr.poll());
+        }
     }
 
-    static int kthSmallest(int[] arr, int k) {
+    static PriorityQueue<Integer> kLargest(int[] arr, int k) {
         PriorityQueue<Integer> pr = new PriorityQueue<Integer>(k);
         for (int ele : arr) {
             pr.add(ele);
+            if (pr.size() > k)
+                pr.poll();
+        }
+        return pr;
 
-        }
-        int kthSmall = -1;
-        for (int i = 0; i < k; i++) {
-            kthSmall = pr.poll();
-        }
-        return kthSmall;
     }
 }

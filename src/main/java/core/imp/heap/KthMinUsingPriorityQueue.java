@@ -14,25 +14,43 @@ package core.imp.heap;
 
 import java.util.PriorityQueue;
 
-public class KLargestUsingPriorityQueue {
+public class KthMinUsingPriorityQueue {
 
     public static void main(String[] args) {
         int[] arr = {3, 2, 1, 5, 6};
         int k = 2;
-        PriorityQueue<Integer> pr = kLargest(arr, k);
-        for (int i = 0; i < k; i++) {
-            System.out.println(pr.poll());
-        }
+
+        int smallest = kthSmallest(arr, k);
+        System.out.println(smallest);
     }
 
-    static PriorityQueue<Integer> kLargest(int[] arr, int k) {
+    static int kthSmallest(int[] arr, int k) {
         PriorityQueue<Integer> pr = new PriorityQueue<Integer>(k);
         for (int ele : arr) {
             pr.add(ele);
-            if (pr.size() > k)
-                pr.poll();
         }
-        return pr;
+        int kthSmall = -1;
+        for (int i = 0; i < k; i++) {
+            kthSmall = pr.poll();
+        }
+        return kthSmall;
+    }
+
+    public static void findKthSmallest_practice(int[] arr, int k){
+        PriorityQueue<Integer> pq = new PriorityQueue<>(arr.length);
+        for(int n: arr){
+            pq.add(n);
+            System.out.println(pq);
+        }
+        System.out.println("");
+        int kthSmallest = -1;
+        for (int i = 0; i < k; i++) {
+            System.out.println(pq);
+            kthSmallest = pq.poll();
+
+        }
+        System.out.println(kthSmallest);
 
     }
+
 }
