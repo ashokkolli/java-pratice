@@ -21,8 +21,7 @@ public class TopKFrequentElements {
         }
 
         // init heap 'the less frequent element first'
-        Queue<Integer> heap = new PriorityQueue<>(
-                (n1, n2) -> count.get(n1) - count.get(n2));
+        Queue<Integer> heap = new PriorityQueue<>();
 
         // 2. keep k top frequent elements in the heap
         // O(N log k) < O(N log N) time
@@ -39,5 +38,26 @@ public class TopKFrequentElements {
         }
         return top;
     }
+
+    public static void frequentElements(int[] arr, int k){
+
+        Map<Integer, Integer> map = new HashMap<>();
+        for(int i =0; i< arr.length; i++){
+            map.put(arr[i], map.getOrDefault(arr[i], 0) +1);
+        }
+        Queue<Integer> pq = new PriorityQueue<>();
+        for(int n : map.keySet()){
+            pq.add(n);
+            if(pq.size() > k)
+                pq.poll();
+        }
+
+        // 3. Build an output array
+        int[] top = new int[k];
+        for(int i = k-1;  i >= 0 ; --i){
+            top[i] = pq.poll();
+        }
+    }
+
 
 }
