@@ -13,8 +13,10 @@ public class StringCompression {
     // and if new compressed string length is not smaller than the original string then return the original string.
 
     public static void main(String[] args) {
-         int i = compress("aabaacc".toCharArray());
+        /* int i = compress("aabaacc".toCharArray());
         System.out.println(i);
+*/
+
 
     }
 
