@@ -1,5 +1,6 @@
 package core.imp.strings;
 
+import java.util.Arrays;
 import java.util.LinkedHashMap;
 import java.util.Map;
 
@@ -12,27 +13,30 @@ public class StringCompression {
     // and if new compressed string length is not smaller than the original string then return the original string.
 
     public static void main(String[] args) {
-        String str = compressedString("aaabc");
-        System.out.println(str);
+         int i = compress("aabaacc".toCharArray());
+        System.out.println(i);
+
     }
 
-    public static String compressedString(String str) {
-        int strLength = str.length();
-        Map<Character, Integer> map = new LinkedHashMap<>();
-        StringBuilder sb = new StringBuilder();
-        for (int i = 0; i < strLength; i++) {
-            if (map.containsKey(str.charAt(i))) {
-                map.put(str.charAt(i), map.get(str.charAt(i)) + 1);
-            } else
-                map.put(str.charAt(i), 1);
-        }
-        for (Map.Entry<Character, Integer> entry : map.entrySet()) {
-            sb.append(entry.getKey()).append(entry.getValue());
-        }
-        if (sb.toString().length() < str.length())
-            return sb.toString();
-        return str;
-    }
 
+//https://leetcode.com/problems/string-compression/discuss/92559/Simple-Easy-to-Understand-Java-solution
+
+    public static int compress(char[] chars) {
+        int len = 0, i = 0;
+        while(i < chars.length){
+            char curr = chars[i];
+            int count = 0;
+            while(i < chars.length && chars[i] == curr){
+                i++;
+                count++;
+            }
+            chars[len++] = curr;
+            if(count > 1)
+                for(char c : String.valueOf(count).toCharArray()) { // when count is two digits or more than 9
+                    chars[len++] = c;
+                }
+        }
+        return len;
+    }
 
 }
