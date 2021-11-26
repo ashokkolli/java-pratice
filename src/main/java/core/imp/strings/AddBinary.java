@@ -3,6 +3,7 @@ package core.imp.strings;
 public class AddBinary {
 
     //https://leetcode.com/problems/add-binary/
+    //https://leetcode.com/problems/add-binary/discuss/24488/Short-AC-solution-in-Java-with-explanation
 
     public static void main(String[] args) {
 
