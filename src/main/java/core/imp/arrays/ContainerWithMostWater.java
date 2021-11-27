@@ -20,10 +20,9 @@ public class ContainerWithMostWater {
             res = Math.max(area, res);
             if(height[l] < height[r]){
                 l++;
-            }else if (height[l] > height[r])
+            }else                    // if (height[l] > height[r]) or both are equal
                 r--;
-            else
-                r--; // if both heights are equal, please reduce right --;
+                         // if both heights are equal, please reduce right --;
         }
         System.out.println(res);
         return res;
