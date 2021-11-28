@@ -8,11 +8,16 @@ package core;
 //https://medium.com/@CalvinChankf/solving-basic-calculator-i-ii-iii-on-leetcode-74d926732437
 
 
-
+import java.util.ArrayList;
+import java.util.List;
 import java.util.Stack;
 
 public class _227_Basic_Calculator_II {
+    int x;
 
+    _227_Basic_Calculator_II(int x){
+        this.x = x;
+    }
     public int calculate(String s) {
 
         if (s == null || s.isEmpty()) return 0;
@@ -47,6 +52,11 @@ public class _227_Basic_Calculator_II {
             result += stack.pop();
         }
         return result;
+    }
+
+    public static void main(String[] args) {
+
+
     }
 
 }
