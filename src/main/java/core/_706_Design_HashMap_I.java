@@ -2,6 +2,9 @@ package core;
 
 import java.util.Arrays;
 
+
+//https://dev.to/seanpgallivan/solution-design-hashmap-19ee
+
 public class _706_Design_HashMap_I {
 
         int[] data;
