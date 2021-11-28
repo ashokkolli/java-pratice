@@ -16,23 +16,25 @@ public class _224_Basic_Calculator {
             for(int i = 0; i < len; i++){
                 if(Character.isDigit(input.charAt(i))){
                     int sum = input.charAt(i) - '0';
-                    while(i + 1 < len && Character.isDigit(input.charAt(i+1))){
+                    while(i + 1 < len && Character.isDigit(input.charAt(i+1))){   //construct a multi-digits number if any, e.g. "23" = 2*10+3 = 23
                         sum = sum * 10 + input.charAt(i+1) - '0';
                         i++;
                     }
-                    res = res + sum*sign;
-                }else if(input.charAt(i) == '+')
+                    res = res + sum*sign; //                 Sum up the intermediate result
+                }else if(input.charAt(i) == '+') //          The next number will be using +
                     sign = 1;
-                else if (input.charAt(i) == '-')
+                else if (input.charAt(i) == '-') //          the next number will be using -
                     sign = -1;
                 else if(input.charAt(i) == '('){
-                    stack.push(res);
+                    stack.push(res);                         // put the intermediate result(from the front) and sign into the stack
                     stack.push(sign);
-                    //reset res and sign
-                    res = 0;
-                    sign = 1;
-                }else if(input.charAt(i) == ')'){
-                    res = res*stack.pop() + stack.pop();
+                    res = 0;                                 //since we have put the intermediate result in stack,
+                    sign = 1;                                // we can reset the things for calculation starting from this (
+                }else if(input.charAt(i) == ')'){            //  last item is the sign we saved for calculation e.g. 1+(2+3) the 1st +
+                    sign  = stack.pop();                     // previousLevelResult the intermediate result before this level, (xxx)
+                    int preResult = stack.pop();
+
+                    res = res*sign + preResult;
                 }
 
             }
