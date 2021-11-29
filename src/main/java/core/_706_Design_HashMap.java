@@ -1,6 +1,7 @@
 package core;
 
 //https://dev.to/seanpgallivan/solution-design-hashmap-ver-2-3ihj
+//https://leetcode.com/problems/design-hashmap/solution/
 
 
 class ListNode {

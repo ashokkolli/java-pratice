@@ -1,16 +1,17 @@
-package core.imp.strings.leetcode.easy;
+package core;
 
 import java.util.HashMap;
 import java.util.Stack;
 
+//https://leetcode.com/problems/valid-parentheses/
 
-public class ValidParentheses {
-    static HashMap<Character, Character> map;
+public class _20_Valid_Parentheses {
+
+    static HashMap<Character, Character> map = null;
 
     public static void main(String[] args) {
         String str = "{([])}";
-        boolean b = isValid(str);
-        System.out.println(b);
+        System.out.println(isValid(str));
     }
 
     public static boolean isValid(String str) {
