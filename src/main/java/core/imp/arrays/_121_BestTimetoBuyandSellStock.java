@@ -1,6 +1,6 @@
-package core.imp.arrays.leetcode.easy;
+package core.imp.arrays;
 
-public class BestTimeToBuyAndSellStocks {
+public class _121_BestTimetoBuyandSellStock {
 
     public static void main(String[] args) {
         int[] prices = {7,1,5,3,6,4};
@@ -19,6 +19,10 @@ public class BestTimeToBuyAndSellStocks {
     }
 //        int[] prices = {7,1,5,3,6,4};
     //Kadane's algorithm.
+
+    //for every element, we are calculating
+    // the difference between that element and the minimum of all the values before that element,
+    // and we are updating the maximum profit if the difference thus found is greater than the current maximum profit.
     public static int maxProfit(int[] prices){
         int max_profit = 0;
         int min_price = Integer.MAX_VALUE;

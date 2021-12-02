@@ -1,4 +1,4 @@
-package core.imp.arrays.leetcode.easy.medium;
+package core.imp.arrays.leetcode.medium;
 
 public class ProductOfArrayExceptSelf {
 
