@@ -26,7 +26,7 @@ Output: [0,1]
 *
 *
 * */
-public class _2SUM {
+public class _1_TwoSum {
 
     public static int[] _2SUM(int[] arr, int target){
         int[] ind = new int[2];

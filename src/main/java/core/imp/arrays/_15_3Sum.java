@@ -27,9 +27,13 @@ Output: []
 
 //https://leetcode.com/problems/3sum/
 //https://www.youtube.com/watch?v=jzZsG8n2R9A&t=39s
-public class _3SUM {
+public class _15_3Sum {
 
     //_3sum(new int[]{-2, -2, 0, 0, 2, 2});
+
+    public static void main(String[] args) {
+        _3sum(new int[]{-2, -2, 0, 0, 2, 2});
+    }
     public static List<List<Integer>> _3sum(int[] num){
         //sort uses quicksort //O(nlogn)
         Arrays.sort(num);
@@ -52,24 +56,45 @@ public class _3SUM {
         int l = i+1;
         int r = num.length - 1;
         while(l < r){
+            System.out.println("i**" + i);
+            System.out.println("l**" + l);
+            System.out.println("r**" + r);
+            System.out.println("");
+
             int sum = num[i] +num[l] + num[r];
-            if(sum < 0)
+            if(sum < 0) {
+                System.out.println("");
+                System.out.println("sum < 0");
                 l++;
-            else if(sum > 0)
+                System.out.println("l**" + l);
+
+            }
+            else if(sum > 0) {
                 r--;
+                System.out.println("");
+                System.out.println("sum > 0");
+                System.out.println("r**" + r);
+
+            }
             else{
+                System.out.println("");
+                System.out.println("sum == 0");
                 list.add(Arrays.asList(num[i], num[l], num[r]));
                 l++;
                 r--;
-               while(num[l] == num[l-1] && l < r) // this is remove the duplicates in the 2_SUM
-                    l++;
+                System.out.println("l**" + l);
+                System.out.println("r**" + r);
+
+                while(num[l] == num[l-1] && l < r) {// this is remove the duplicates in the 2_SUM
+                   l++;
+                    System.out.println("");
+                    System.out.println("l**" + l);
+
+                }
             }
         }
     }
 
-    public static void main(String[] args) {
-        _3sum_II(new int[]{-2, -2, 0, 0, 2, 2}, 4);
-    }
 
     public static List<List<Integer>> _3sum_II(int[] num, int target){
         //sort uses quicksort //O(nlogn)
@@ -86,7 +111,6 @@ public class _3SUM {
         }
         System.out.println(list);
         return list;
-
     }
 
 

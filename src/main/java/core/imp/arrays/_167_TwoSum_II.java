@@ -1,6 +1,6 @@
 package core.imp.arrays;
 
-public class _2SUM_II {
+public class _167_TwoSum_II {
 
     /*
         Given a 1-indexed array of integers numbers that is already sorted in non-decreasing order,

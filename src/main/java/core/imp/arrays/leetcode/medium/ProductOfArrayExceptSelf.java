@@ -7,7 +7,6 @@ public class ProductOfArrayExceptSelf {
         product(arr);
     }
 
-
     public static int[] product(int[] arr){
 
         int len = arr.length;
@@ -19,12 +18,12 @@ public class ProductOfArrayExceptSelf {
 
         int[] res = new int[len];
 
-
-
         // L[i] contains the product of all the elements to the left
         // Note: for the element at index '0', there are no elements to the left,
         // so L[0] would be 1
+
         L[0] = 1;
+
         for(int i = 1; i < len; i++ ){
             L[i] = L[i - 1] * arr[i-1];
             System.out.println(L[i]);
@@ -51,10 +50,8 @@ public class ProductOfArrayExceptSelf {
             // Else, multiple product of all elements to the left and to the right
             res[i] = L[i] * R[i];
           System.out.println(res[i]);
-
       }
         return res;
-
 
     }
 

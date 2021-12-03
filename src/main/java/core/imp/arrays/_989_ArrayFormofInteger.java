@@ -1,6 +1,6 @@
-package core.imp.arrays.leetcode.easy;
+package core.imp.arrays;
 
-public class NumberToArray {
+public class _989_ArrayFormofInteger {
     public static void main(String[] args) {
         numberToArray(1234567890);
     }
