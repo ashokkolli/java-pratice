@@ -1,6 +1,6 @@
 package core.imp.arrays;
 
-public class ContainerWithMostWater {
+public class _11_Container_With_Most_Water {
 
 //https://leetcode.com/problems/container-with-most-water/
 
@@ -16,7 +16,7 @@ public class ContainerWithMostWater {
         int l =  0;
         int r = height.length -1;
         while(l < r){
-            area = (r - l) * Math.min(height[l], height[r]);
+            area = (r - l) * Math.min(height[l], height[r]); //
             res = Math.max(area, res);
             if(height[l] < height[r]){
                 l++;

@@ -27,7 +27,7 @@ Output: []
 
 //https://leetcode.com/problems/3sum/
 //https://www.youtube.com/watch?v=jzZsG8n2R9A&t=39s
-public class _3SUM_To_Target {
+public class _15_3SUM_To_Target {
 
     public static void main(String[] args) {
         _3sum(new int[]{-2, -2, 0, 0, 2, 2}, 4);

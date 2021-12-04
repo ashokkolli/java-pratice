@@ -6,9 +6,6 @@ public class _53_MaximumSubarray {
         int[] nums =  {-2,1,-3,4,-1,2,1,-5,4};
         /*maximumSumSubArray(nums);*/
 
-        if("abc" == "edf"){
-            System.out.println("pass");
-        }
 
     }
 
@@ -32,9 +29,10 @@ public class _53_MaximumSubarray {
     public static int maximumSumSubArray(int[] num){
         int max_sum = num[0];
         int curr_sum = num[0];
-//        int[] nums =  {-2,1,-3,4,-1,2,1,-5,4};
+//      int[] nums =  {-2,1,-3,4,-1,2,1,-5,4};
         for(int i =1; i < num.length; i++){
-            curr_sum = Math.max(num[i], curr_sum + num[i]);
+            curr_sum = curr_sum + num[i];
+            curr_sum = Math.max(num[i], curr_sum);
             max_sum = Math.max(max_sum, curr_sum);
         }
         System.out.println(max_sum);
