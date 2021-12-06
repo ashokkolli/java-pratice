@@ -1,0 +1,30 @@
+package core.tiktok.design;
+
+import java.util.Arrays;
+
+
+//https://dev.to/seanpgallivan/solution-design-hashmap-19ee
+
+public class _706_Design_HashMap_I {
+
+        int[] data;
+
+        public _706_Design_HashMap_I() {
+            data = new int[1000001];
+            Arrays.fill(data, -1);
+        }
+
+        public void put(int key, int val) {
+            data[key] = val;
+        }
+
+        public int get(int key) {
+            return data[key];
+        }
+
+        public void remove(int key) {
+            data[key] = -1;
+        }
+    }
+
+
