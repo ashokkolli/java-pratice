@@ -4,7 +4,7 @@ package core.tiktok.arrays;
  * Created by Ashok Kolli on 4/27/2021
  */
 
-public class MergeTwoSortedArrays {
+public class _88_MergeTwoSortedArrays {
 
 
     public static void main(String[] args) {

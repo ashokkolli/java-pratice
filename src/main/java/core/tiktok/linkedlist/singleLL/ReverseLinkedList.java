@@ -2,7 +2,7 @@ package core.tiktok.linkedlist.singleLL;
 
 
 //Definition for singly-linked list.
-class ListNode {
+ class ListNode {
     int val;
     ListNode next;
     ListNode() {

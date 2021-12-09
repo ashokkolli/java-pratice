@@ -1,4 +1,4 @@
-package core.tiktok.strings;
+package core.tiktok.stack;
 
 
 
@@ -21,28 +21,28 @@ public class _227_Basic_Calculator_II {
         if (s == null || s.isEmpty()) return 0;
         int len = s.length();
         Stack<Integer> stack = new Stack<Integer>();
-        int currentNumber = 0;
+        int currNum = 0;
         char operation = '+';
         for (int i = 0; i < len; i++) {
-            char currentChar = s.charAt(i);
-            if (Character.isDigit(currentChar)) {
-                currentNumber = (currentNumber * 10) + (currentChar - '0');
+            char currChar = s.charAt(i);
+            if (Character.isDigit(currChar)) {
+                currNum = (currNum * 10) + (currChar - '0');
             }
-            if (!Character.isDigit(currentChar) && !Character.isWhitespace(currentChar) || i == len - 1) {
+            if (!Character.isDigit(currChar) && !Character.isWhitespace(currChar) || i == len - 1) {
                 if (operation == '-') {
-                    stack.push(-currentNumber);
+                    stack.push(-currNum);
                 }
                 else if (operation == '+') {
-                    stack.push(currentNumber);
+                    stack.push(currNum);
                 }
                 else if (operation == '*') {
-                    stack.push(stack.pop() * currentNumber);
+                    stack.push(stack.pop() * currNum);
                 }
                 else if (operation == '/') {
-                    stack.push(stack.pop() / currentNumber);
+                    stack.push(stack.pop() / currNum);
                 }
-                operation = currentChar;
-                currentNumber = 0;
+                operation = currChar;
+                currNum = 0;
             }
         }
         int result = 0;

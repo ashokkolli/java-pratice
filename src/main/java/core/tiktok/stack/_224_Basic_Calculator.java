@@ -1,4 +1,4 @@
-package core.tiktok.strings;
+package core.tiktok.stack;
 
 import java.util.Stack;
 
