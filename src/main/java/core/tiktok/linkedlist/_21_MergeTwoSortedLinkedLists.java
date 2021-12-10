@@ -13,7 +13,7 @@ class ListNode {
     }
 }
 
-public class MergeTwoLinkedLists {
+public class _21_MergeTwoSortedLinkedLists {
     public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
         ListNode head = new ListNode(0);
         ListNode handler = head;

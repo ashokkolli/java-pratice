@@ -22,10 +22,6 @@ package core.tiktok.linkedlist.singleLL;
 
 public class ReverseLinkedList {
 
-    public static void main(String[] args) {
-
-    }
-
     public static ListNode reverseLinkedList(ListNode head) {
         ListNode prev = null;
         ListNode curr = head;
