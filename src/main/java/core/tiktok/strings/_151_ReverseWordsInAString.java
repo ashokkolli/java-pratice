@@ -19,8 +19,6 @@ public class _151_ReverseWordsInAString {
 
     }
 
-
-
     public static String reverseWords_Optimized_Deque(String str) {
         int left = 0;
         int right = str.length() - 1;
@@ -28,6 +26,7 @@ public class _151_ReverseWordsInAString {
         while (left <= right && str.charAt(left) == ' ') {
             left++;
         }
+
         //Remove trailing spaces
         while (left <= right && str.charAt(right) == ' ') {
             right--;
