@@ -4,6 +4,9 @@ import java.util.Arrays;
 import java.util.Comparator;
 import java.util.PriorityQueue;
 
+//https://www.programcreek.com/2014/05/leetcode-meeting-rooms-ii-java/
+//https://leetcode.com/problems/meeting-rooms-ii/
+
 public class _253_Meeting_Rooms_II {
 
     public int minMeetingRooms(int[][] intervals) {
