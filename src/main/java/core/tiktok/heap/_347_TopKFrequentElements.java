@@ -5,7 +5,7 @@ import java.util.Map;
 import java.util.PriorityQueue;
 import java.util.Queue;
 
-public class TopKFrequentElements {
+public class _347_TopKFrequentElements {
 
     public static void main(String[] args) {
 
@@ -19,17 +19,17 @@ public class TopKFrequentElements {
 
         // 1. build hash map : character and how often it appears
         // O(N) time
-        Map<Integer, Integer> count = new HashMap();
+        Map<Integer, Integer> count_map = new HashMap();
         for (int n: nums) {
-            count.put(n, count.getOrDefault(n, 0) + 1);
+            count_map.put(n, count_map.getOrDefault(n, 0) + 1);
         }
 
         // init heap 'the less frequent element first'
-        Queue<Integer> heap = new PriorityQueue<>( (n1, n2) -> count.get(n1) - count.get(n2));
+        Queue<Integer> heap = new PriorityQueue<>( (n1, n2) -> count_map.get(n1) - count_map.get(n2));
 
         // 2. keep k top frequent elements in the heap
         // O(N log k) < O(N log N) time
-        for (int n: count.keySet()) {
+        for (int n: count_map.keySet()) {
             heap.add(n);
             if (heap.size() > k) heap.poll();
         }
