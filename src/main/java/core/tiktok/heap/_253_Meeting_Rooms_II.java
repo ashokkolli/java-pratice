@@ -9,7 +9,11 @@ import java.util.PriorityQueue;
 
 public class _253_Meeting_Rooms_II {
 
-    public int minMeetingRooms(int[][] intervals) {
+    public static void main(String[] args) {
+       int n =  minMeetingRooms(new int[][]{{0,30},{5,10},{15,20}});
+        System.out.println(n);
+    }
+    public static int minMeetingRooms(int[][] intervals) {
         Arrays.sort(intervals, Comparator.comparing((int[] itv) -> itv[0]));
 
         PriorityQueue<Integer> heap = new PriorityQueue<>();

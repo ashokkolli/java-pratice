@@ -2,7 +2,7 @@ package core.tiktok.strings.slidingwindow;
 
 import java.util.HashMap;
 
-public class LongestSubStringWithKDistinctCharacters {
+public class _340_LongestSubStringWithKDistinctCharacters {
     public static void main(String[] args) {
         String str = "eceba";
         int x = longestSubStringWithKDistinctCharacters(str, 3);
