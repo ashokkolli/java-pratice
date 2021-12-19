@@ -9,6 +9,12 @@ public class _340_LongestSubStringWithKDistinctCharacters {
         System.out.println(x);
     }
 
+    /*
+    https://leetcode.com/problems/longest-substring-with-at-most-k-distinct-characters/solution/
+    * overall time complexity is \mathcal{O}(N k)O(Nk).
+    *
+    * */
+
     public static int longestSubStringWithKDistinctCharacters(String str, int k) {
         int maxLength = 0;
         String maxString = "";
@@ -17,19 +23,15 @@ public class _340_LongestSubStringWithKDistinctCharacters {
         int len = str.length();
         for (int j = 0; j < len; j++) {
             char ch = str.charAt(j);
-            if (map.containsKey(ch))
-                map.put(ch, map.get(ch) + 1);
-            else
-                map.put(ch, 1);
+            map.put(ch, map.getOrDefault(ch, 0) + 1);
 
             if (map.size() <= k) {
                 maxLength = Math.max(maxLength, j - i + 1);
-                maxString = str.substring(i, j-i+1);
-            }
-            else {
+                maxString = str.substring(i, j - i + 1);
+            } else {
                 while (map.size() > k) {
                     ch = str.charAt(i);
-                    if(map.get(ch) == 1)
+                    if (map.get(ch) == 1)
                         map.remove(ch);
                     else
                         map.put(ch, map.get(ch) - 1);
