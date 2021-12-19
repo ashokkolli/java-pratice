@@ -10,7 +10,7 @@ import java.util.Map;
 //https://www.youtube.com/watch?v=jSto0O4AJbM
 
 
-public class MinimumWindowSubString {
+public class _76_MinimumWindowSubString {
 
     public static String minWindow(String s, String t) {
         if (s.length() == 0 || t.length() == 0)
