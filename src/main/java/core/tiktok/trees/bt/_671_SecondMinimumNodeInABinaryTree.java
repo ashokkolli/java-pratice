@@ -12,11 +12,11 @@ import java.util.Set;
 //Definition for a binary tree node.
 class TreeNode {
     int val;
-    TreeNode left;
-    TreeNode right;
+    Node_ left;
+    Node_ right;
     TreeNode() {}
     TreeNode(int val) { this.val = val; }
-    TreeNode(int val, TreeNode left, TreeNode right) {
+    TreeNode(int val, Node_ left, Node_ right) {
         this.val = val;
         this.left = left;
         this.right = right;
@@ -26,7 +26,7 @@ class TreeNode {
 
 public class _671_SecondMinimumNodeInABinaryTree {
 
-    public void dfs(TreeNode root, Set<Integer> uniques){
+    public void dfs(Node_ root, Set<Integer> uniques){
         if(root!= null){
             uniques.add(root.val);
             dfs(root.left, uniques);
@@ -36,7 +36,7 @@ public class _671_SecondMinimumNodeInABinaryTree {
 
     }
 
-    public int findSecondMinimumValue(TreeNode root) {
+    public int findSecondMinimumValue(Node_ root) {
 
         Set<Integer> uniques = new HashSet<>();
         dfs(root, uniques);

@@ -5,11 +5,11 @@ import java.util.List;
  //Definition for a binary tree node.
  class TreeNode {
      int val;
-     TreeNode left;
-     TreeNode right;
+     TreeNode_ left;
+     TreeNode_ right;
      TreeNode() {}
      TreeNode(int val) { this.val = val; }
-     TreeNode(int val, TreeNode left, TreeNode right) {
+     TreeNode(int val, TreeNode_ left, TreeNode_ right) {
          this.val = val;
          this.left = left;
          this.right = right;
@@ -20,7 +20,7 @@ import java.util.List;
 
 public class _230_KthSmallestElement_in_BST {
 
-    public static List<Integer> inOrder(TreeNode node, List<Integer> list){
+    public static List<Integer> inOrder(TreeNode_ node, List<Integer> list){
         if(node == null) return list;
         inOrder(node.left, list);
         list.add(node.val);
@@ -28,7 +28,7 @@ public class _230_KthSmallestElement_in_BST {
         return list;
     }
 
-    public static int kthSmallest(TreeNode node, int k){
+    public static int kthSmallest(TreeNode_ node, int k){
         List<Integer> list = new ArrayList<>();
         list = inOrder(node, list);
 
