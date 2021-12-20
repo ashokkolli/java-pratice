@@ -9,7 +9,6 @@ import java.util.Map;
 
 //https://www.youtube.com/watch?v=jSto0O4AJbM
 
-
 public class _76_MinimumWindowSubString {
 
     public static String minWindow(String s, String t) {
@@ -41,10 +40,9 @@ public class _76_MinimumWindowSubString {
             //add one character from the right to window
             windowCount.put(s.charAt(r), windowCount.getOrDefault(s.charAt(r), 0) + 1);
             //If the frequency of the current character added equals to the desired count in t then increment
-            // the formed count by 1
-            if (dictT.containsKey(s.charAt(r)) && windowCount.get(s.charAt(s.charAt(r))).intValue() == dictT.get(s.charAt(s.charAt(r))).intValue())
+            //the formed count by 1
+            if (dictT.containsKey(s.charAt(r)) && windowCount.get(s.charAt(r)).intValue() == dictT.get(s.charAt(r)).intValue())
                 formed++;
-
 
             //try and contract the window till the point where it ceases to be desirable
             while (l <= r && formed == required) {
