@@ -19,7 +19,8 @@ public class _56_MergeIntervals {
 //https://leetcode.com/problems/merge-intervals/solution/
 
     public static int[][] mergeIntervals(int[][] intervals){
-        Arrays.sort(intervals, (a,b) -> Integer.compare(a[0], b[0]));// Please refer https://stackoverflow.com/questions/5393254/java-comparator-class-to-sort-arrays
+        //Sort it based on first field
+        Arrays.sort(intervals, (int[] a, int[] b) -> Integer.compare(a[0], b[0]));// Please refer https://stackoverflow.com/questions/5393254/java-comparator-class-to-sort-arrays
 
         LinkedList<int[]> merged = new LinkedList<>();
         for(int[] interval : intervals){

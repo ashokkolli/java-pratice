@@ -21,10 +21,7 @@ public class MostFrequentWord {
     public static String getMostFrequentWord(String[] strArr) {
         Map<String, Integer> map = new LinkedHashMap<>();
         for (int i = 0; i < strArr.length; i++) {
-            if (map.containsKey(strArr[i])) {
-                map.put(strArr[i], map.get(strArr[i]) + 1);
-            } else
-                map.put(strArr[i], 1);
+            map.put(strArr[i], map.getOrDefault(strArr[i], 0) + 1);
         }
         int count = 1;
         String mostFrequentWord = "";

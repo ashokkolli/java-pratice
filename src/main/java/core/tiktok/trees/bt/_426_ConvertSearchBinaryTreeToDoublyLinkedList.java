@@ -15,7 +15,7 @@ class Node_ {
         this.right = right;
     }
 };
-public class _426_ConvertBinaryTreeToDoublyLinkedList {
+public class _426_ConvertSearchBinaryTreeToDoublyLinkedList {
     public Node_ treeToDoublyList(Node_ root) {
 
         Node_ front = null;
@@ -26,18 +26,13 @@ public class _426_ConvertBinaryTreeToDoublyLinkedList {
         inOrder(root, list);
 
         for(Node_ node : list){
-
+            //Expand the rear
             if(rear!= null){
                 rear.right = node;
                 node.left = rear;
-
-
-            }else
+            }else // store the front
                 front = node;
-
             rear = node;
-
-
         }
 
         //Close DLL
@@ -51,7 +46,6 @@ public class _426_ConvertBinaryTreeToDoublyLinkedList {
     public void inOrder(Node_ node, List<Node_> list){
 
         if(node!=null){
-
             inOrder(node.left, list);
             list.add(node);
             inOrder(node.right, list);
@@ -59,6 +53,7 @@ public class _426_ConvertBinaryTreeToDoublyLinkedList {
         }
 
     }
+
 
 
 }

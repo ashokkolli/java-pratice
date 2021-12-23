@@ -14,13 +14,11 @@ public class Anagrams {
     public static boolean isAnagram(String str1, String str2){
 
         boolean result = false;
-
         str1 = str1.toLowerCase();
         str2 = str2.toLowerCase();
 
         // check if length is same
         if(str1.length() == str2.length()) {
-
             // convert strings to char core.array
             char[] charArray1 = str1.toCharArray();
             char[] charArray2 = str2.toCharArray();
