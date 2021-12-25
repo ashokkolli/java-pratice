@@ -1,7 +1,7 @@
 package core.tiktok.strings;
 /**
  * Created by Ashok Kolli on 5/15/2021
- */
+*/
 
 public class _443_String_Compression {
     // Objective: Write an algorithm to compress the given string by using the count of repeated characters
