@@ -1,37 +1,37 @@
 package core.tiktok.linkedlist;
 class ListNode {
     int val;
-   ListNode next;
+   ListNodee next;
     ListNode() {
     }
     ListNode(int val) {
         this.val = val;
     }
-    ListNode(int val, ListNode next) {
+    ListNode(int val, ListNodee next) {
         this.val = val;
         this.next = next;
     }
 }
 
 public class _21_MergeTwoSortedLinkedLists {
-    public ListNode mergeTwoLists(ListNode l1, ListNode l2) {
-        ListNode head = new ListNode(0);
-        ListNode handler = head;
+    public ListNodee mergeTwoLists(ListNodee l1, ListNodee l2) {
+        ListNodee head = new ListNodee(0);
+        ListNodee rear = head;
         while(l1 != null && l2 != null) {
             if (l1.val <= l2.val) {
-                handler.next = l1;
+                rear.next = l1;
                 l1 = l1.next;
             } else {
-                handler.next = l2;
+                rear.next = l2;
                 l2 = l2.next;
             }
-            handler = handler.next;
+            rear = rear.next;
         }
 
         if (l1 != null) {
-            handler.next = l1;
+            rear.next = l1;
         } else if (l2 != null) {
-            handler.next = l2;
+            rear.next = l2;
         }
 
         return head.next;

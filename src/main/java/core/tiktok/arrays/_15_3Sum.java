@@ -48,7 +48,6 @@ public class _15_3Sum {
             }
 
         }
-        System.out.println(list);
         return list;
     }
 
@@ -80,15 +79,19 @@ public class _15_3Sum {
                 System.out.println("");
                 System.out.println("sum == 0");
                 list.add(Arrays.asList(num[i], num[l], num[r]));
-                l++;
-                r--;
                 System.out.println("l**" + l);
                 System.out.println("r**" + r);
+                l++;
+                r--;
+
+                System.out.println(list);
 
                 while(num[l] == num[l-1] && l < r) {// this is remove the duplicates in the 2_SUM
+                    System.out.println("this is remove the duplicates in the 2_SUM");
                    l++;
-                    System.out.println("");
                     System.out.println("l**" + l);
+                    System.out.println("");
+
 
                 }
             }

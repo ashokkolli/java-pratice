@@ -3,7 +3,6 @@ package core.tiktok.linkedlist;
 public class Testing {
 // Java program for reversing the linked list
 
-
     static Node head;
 
     public static void main(String[] args) {

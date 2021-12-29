@@ -36,9 +36,6 @@ public class _1_TwoSum {
             if(map.containsKey(target-arr[i])){
                 ind[0] = map.get(target-arr[i]);
                 ind[1] = i;
-                System.out.println(ind[0]);
-                System.out.println(ind[1]);
-
                 return ind;
             }else
                 map.put(arr[i], i);

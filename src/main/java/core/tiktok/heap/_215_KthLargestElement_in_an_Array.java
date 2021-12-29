@@ -20,12 +20,12 @@ public class _215_KthLargestElement_in_an_Array {
     //https://stackoverflow.com/questions/30072077/priority-queue-ordering-of-elements
     //https://leetcode.com/problems/kth-largest-element-in-an-array/solution/
 
-/*
-*
-* The time complexity of adding an element in a heap of size k is \mathcal{O}(\log k)O(logk),
-* and we do it N times that means \mathcal{O}(N \log k)O(Nlogk) time complexity for the algorithm.
-*
-* */
+    /*
+     *
+     * The time complexity of adding an element in a heap of size k is \mathcal{O}(\log k)O(logk),
+     * and we do it N times that means \mathcal{O}(N \log k)O(Nlogk) time complexity for the algorithm.
+     *
+     * */
     public static void main(String[] args) {
         int[] arr = {3, 2, 1, 5, 6, 0};
         int k = 2;
@@ -36,7 +36,6 @@ public class _215_KthLargestElement_in_an_Array {
             System.out.println(pr);
         }
 */
-
         PriorityQueue<Integer> pr = kLargest(arr, k);
         for (int i = 0; i < k; i++) {
             System.out.println(pr.poll());

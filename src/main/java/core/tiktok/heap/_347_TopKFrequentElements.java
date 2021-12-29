@@ -1,17 +1,14 @@
 package core.tiktok.heap;
 
-import java.util.HashMap;
-import java.util.Map;
-import java.util.PriorityQueue;
-import java.util.Queue;
+import java.util.*;
 
 public class _347_TopKFrequentElements {
 
     public static void main(String[] args) {
-
+        topKFrequent(new int[]{1,1,1,2,2,3}, 2);
     }
 
-    public int[] topKFrequent(int[] nums, int k) {
+    public static int[] topKFrequent(int[] nums, int k) {
         // O(1) time
         if (k == nums.length) {
             return nums;
@@ -25,7 +22,13 @@ public class _347_TopKFrequentElements {
         }
 
         // init heap 'the less frequent element first'
-        Queue<Integer> heap = new PriorityQueue<>( (n1, n2) -> count_map.get(n1) - count_map.get(n2));
+        Queue<Integer> heap = new PriorityQueue<>(new Comparator<Integer>() {
+            @Override
+            public int compare(Integer n1, Integer n2) {
+                return count_map.get(n1) - count_map.get(n2);
+            }
+        });
+
 
         // 2. keep k top frequent elements in the heap
         // O(N log k) < O(N log N) time
@@ -34,12 +37,16 @@ public class _347_TopKFrequentElements {
             if (heap.size() > k) heap.poll();
         }
 
+        System.out.println(count_map.keySet());
         // 3. build an output array
         // O(k log k) time
+
+        // you need to traverse from the end, as it is sorted with less frequent element
         int[] top = new int[k];
         for(int i = k - 1; i >= 0; --i) {
             top[i] = heap.poll();
         }
+
         return top;
     }
 
