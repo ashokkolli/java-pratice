@@ -8,13 +8,30 @@ public class _443_String_Compression {
     // and if new compressed string length is not smaller than the original string then return the original string.
 
     public static void main(String[] args) {
-       /* int i = compress("aabaacc".toCharArray());
+        int i = compress_sb("aabbccc".toCharArray());
         System.out.println(i);
-*/
 
     }
 
-
+    //With StringBuilder Space O(n)
+    public static int compress_sb(char[] chars) {
+        int i = 0;
+        StringBuilder sb = new StringBuilder();
+        while(i < chars.length){
+            char curr = chars[i];
+            int count = 0;
+            while(i < chars.length && chars[i] == curr){ // It has to start from the current char to have the count 1 when there is at least one char such as b in aabaacc
+                i++;
+                count++;
+            }
+            sb.append(curr);
+            if(count > 1)
+                sb.append(count);
+        }
+        System.out.println(sb.toString());
+        return sb.toString().length();
+    }
+    //In Place - Constant time O(1)
 //https://leetcode.com/problems/string-compression/discuss/92559/Simple-Easy-to-Understand-Java-solution
 
     public static int compress(char[] chars) {
@@ -34,5 +51,6 @@ public class _443_String_Compression {
         }
         return len;
     }
+
 
 }
