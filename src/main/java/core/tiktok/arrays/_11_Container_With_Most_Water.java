@@ -20,7 +20,7 @@ public class _11_Container_With_Most_Water {
         while(l < r){
             area = (r - l) * Math.min(height[l], height[r]); //
             res = Math.max(area, res);
-            if(height[l] < height[r]){
+            if(height[l] < height[r]){// as we are looking for min of height from left and right that gives the area
                 l++;
             }else                    // if (height[l] > height[r]) or both are equal
                 r--;                 // if both heights are equal, please reduce right --;

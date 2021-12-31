@@ -11,13 +11,13 @@ package core.tiktok.stack;
 import java.util.Stack;
 
 public class _227_Basic_Calculator_II {
-    int x;
+
 
     _227_Basic_Calculator_II(int x){
-        this.x = x;
+
     }
     public int calculate(String s) {
-
+        // 22 - 3 * 5
         if (s == null || s.isEmpty()) return 0;
         int len = s.length();
         Stack<Integer> stack = new Stack<Integer>();
