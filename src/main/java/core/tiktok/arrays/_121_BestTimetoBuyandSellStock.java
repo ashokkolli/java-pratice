@@ -49,7 +49,7 @@ public class _121_BestTimetoBuyandSellStock {
         int min_price = Integer.MAX_VALUE;
         for (int price : prices) {
             min_price = Math.min(min_price, price);
-            max_profit = Math.max(max_profit, price-min_price);
+            max_profit = Math.max(max_profit, price - min_price);
             /*if (price - min_profit > max_profit)
                 max_profit = price - min_profit;*/
         }
