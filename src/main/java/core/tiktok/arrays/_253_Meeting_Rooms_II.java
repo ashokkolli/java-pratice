@@ -7,7 +7,7 @@ import java.util.PriorityQueue;
 public class _253_Meeting_Rooms_II {
 
     public int minMeetingRooms(int[][] intervals) {
-        Arrays.sort(intervals, (a,b) -> Integer.compare(a[0], a[0]));
+        Arrays.sort(intervals, (a,b) -> Integer.compare(a[0], b[0]));
 
         PriorityQueue<Integer> heap = new PriorityQueue<>();
         int count = 0;
