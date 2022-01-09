@@ -25,7 +25,6 @@ public class _11_Container_With_Most_Water {
             }else                    // if (height[l] > height[r]) or both are equal
                 r--;                 // if both heights are equal, please reduce right --;
         }
-        System.out.println(res);
         return res;
     }
 

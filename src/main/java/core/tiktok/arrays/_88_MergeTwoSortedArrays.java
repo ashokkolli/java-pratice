@@ -8,31 +8,33 @@ public class _88_MergeTwoSortedArrays {
 
 
     public static void main(String[] args) {
-        int[] arr1 = {1, 3, 4, 6};
-        int[] arr2 = {2, 5, 8};
-        int len1 = arr1.length;
-        int len2 = arr2.length;
+        int[] nums1 = {1, 3, 4, 6};
+        int[] num2 = {2, 5, 8};
+        int m = nums1.length;
+        int n = num2.length;
 
-        int[] outputArr = new int[len1 + len2];
+        int[] outputArr = new int[m + n];
 
         int i = 0, j = 0, k = 0;
 
-        while (i < len1 && j < len2) {
-            if (arr1[i] < arr2[j])
-                outputArr[k++] = arr1[i++];
+        while (i < m && j < n) {
+            if (nums1[i] < num2[j])
+                outputArr[k++] = nums1[i++];
             else
-                outputArr[k++] = arr2[j++];
+                outputArr[k++] = num2[j++];
         }
 
-        while (i < len1) {
-            outputArr[k++] = arr1[i++];
+        while (i < m) {
+            outputArr[k++] = nums1[i++];
         }
-        while (i < len2) {
-            outputArr[k++] = arr2[j++];
+        while (j < n) {
+            outputArr[k++] = num2[j++];
         }
 
-        for (int l = 0; l < len1 + len2; l++)
-            System.out.println(outputArr[l]);
+        nums1 = outputArr.clone();
+
+        for (int l = 0; l < m + n; l++)
+            System.out.println(nums1[l]);
     }
 
 

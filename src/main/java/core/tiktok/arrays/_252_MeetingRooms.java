@@ -18,9 +18,6 @@ Input: intervals = [[7,10],[2,4]]
 Output: true
     *
     * */
-    public static void main(String[] args) {
-
-    }
     public static boolean canAttendMeetings(int[][] intervals){
         Arrays.sort(intervals, (a,b) -> Integer.compare(a[0], a[0]));
         for(int i = 0; i < intervals.length - 1; i++ ){
