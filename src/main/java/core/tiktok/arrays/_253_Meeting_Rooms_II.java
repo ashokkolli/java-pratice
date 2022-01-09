@@ -7,8 +7,10 @@ import java.util.PriorityQueue;
 public class _253_Meeting_Rooms_II {
 
     public int minMeetingRooms(int[][] intervals) {
-        Arrays.sort(intervals, (a,b) -> Integer.compare(a[0], b[0]));
-
+        Arrays.sort(intervals, (a, b) -> Integer.compare(a[0], b[0]));
+//(1, 10), (2, 7), (3, 19), (8, 12), (10, 20), (11, 30)
+        //10
+        //
         PriorityQueue<Integer> heap = new PriorityQueue<>();
         int count = 0;
         for (int[] itv : intervals) {
@@ -16,8 +18,8 @@ public class _253_Meeting_Rooms_II {
                 count++;
                 heap.offer(itv[1]);
             } else {
-                if (itv[0] >= heap.peek()) {
-                    heap.poll();
+                if (itv[0] >= heap.peek()) { // room available
+                    heap.poll(); // remove the room reference
                 } else {
                     count++;
                 }
@@ -28,4 +30,6 @@ public class _253_Meeting_Rooms_II {
 
         return count;
     }
+
+
 }
