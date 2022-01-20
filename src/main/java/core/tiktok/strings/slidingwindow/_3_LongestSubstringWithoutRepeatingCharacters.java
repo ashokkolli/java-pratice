@@ -7,28 +7,30 @@ import java.util.HashSet;
 public class _3_LongestSubstringWithoutRepeatingCharacters {
 
     public static void main(String[] args) {
-       /* String str = "aabcbb";
-       int x =  longestSubString(str);
-        System.out.println(x);*/
-        longestSubString_bf("abcabcbb");
+        String str = "aabcbb";
+       int x =  lengthOfLongestSubstring(str);
+        System.out.println(x);
+        //longestSubString_bf("abcabcbb");
     }
 
 
-    public int lengthOfLongestSubstring(String s) {
+    public static int lengthOfLongestSubstring(String s) {
         if (s.length()==0) return 0;
         HashMap<Character, Integer> map = new HashMap<Character, Integer>();
         int max=0;
-        for (int i=0, j=0; i<s.length(); ++i){
-            if (map.containsKey(s.charAt(i))){
-                j = Math.max(j,map.get(s.charAt(i))+1); // max is required in cases of "abba"
+        int i =0;
+        for (int j=0; j<s.length(); ++j){
+            if (map.containsKey(s.charAt(j))){
+                i = Math.max(i,map.get(s.charAt(j))+1); // max is required in cases of "abba"
             }
-            map.put(s.charAt(i),i);
-            max = Math.max(max,i-j+1);
+            map.put(s.charAt(j),j);
+            max = Math.max(max,map.size());
         }
         return max;
     }
 
     public static int longestSubString_hashset(String str){
+        //pwwkew
         HashSet<Character> set = new HashSet<>();
         int i = 0;
         int j = 0;
@@ -78,4 +80,21 @@ public class _3_LongestSubstringWithoutRepeatingCharacters {
     }
 
 
-}
+
+    public int lengthOfLongestSubstring_pr1(String s) {
+        HashMap<Character, Integer> map = new HashMap<>();
+        int len = s.length();
+        int max_len = 0;
+        for(int i = 0, j = 0; i < len; i++){
+            if(map.containsKey(s.charAt(i))){
+                j = Math.max(j, map.get(s.charAt(i))+1);
+            }
+            map.put(s.charAt(i), i);
+            max_len = Math.max(max_len, i - j +1);
+        }
+        return max_len;
+    }
+
+
+
+    }

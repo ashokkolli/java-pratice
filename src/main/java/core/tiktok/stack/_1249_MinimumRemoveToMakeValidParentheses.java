@@ -33,6 +33,14 @@ public class _1249_MinimumRemoveToMakeValidParentheses {
         }
         return sb.toString();
     }
-    
+
+    public static void main(String[] args) {
+        Deque<Integer> stack = new ArrayDeque<>();
+        stack.push(1);
+        stack.push(2);
+        stack.pop();
+        System.out.println(stack);
+
+    }
 
 }

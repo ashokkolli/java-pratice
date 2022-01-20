@@ -71,4 +71,26 @@ public class _347_TopKFrequentElements {
     }
 
 
+    public static int[] frequentElements_p(int[] arr, int k){
+
+        Map<Integer, Integer> map = new HashMap<>();
+        for (int n:
+             arr) {
+            map.put(n, map.getOrDefault(n, 0) + 1);
+        }
+        PriorityQueue<Integer> pq = new PriorityQueue<>((n1, n2) -> Integer.compare(map.get(n1), map.get(n2)));
+
+        for(int n : map.keySet()){
+            pq.offer(n);
+            if(pq.size() > k)
+                pq.poll();
+        }
+        int[] output = new int[k];
+        for(int i = k - 1; i>=0; --i){
+            output[i] = pq.poll();
+        }
+        return output;
+    }
+
+
 }

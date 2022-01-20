@@ -1,5 +1,6 @@
 package core.tiktok.stack;
 
+import java.util.EmptyStackException;
 import java.util.NoSuchElementException;
 import java.util.Stack;
 
@@ -18,7 +19,7 @@ public class _232_ImplementQueue_using_TWO_Stacks {
     public int dequeue() {
         if (stack2.isEmpty()) {
             if (stack1.isEmpty())
-                throw new NoSuchElementException();
+                throw new EmptyStackException();
             while (stack1.isEmpty()) {
                 stack2.push(stack1.pop());
             }
@@ -39,6 +40,11 @@ public class _232_ImplementQueue_using_TWO_Stacks {
         }
         return stack2.peek();
 
+    }
+
+    public static void main(String[] args) {
+        Stack stack = new Stack();
+        System.out.println(stack.pop());
     }
 
 
