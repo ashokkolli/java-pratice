@@ -17,7 +17,7 @@ public class SortedSquareRoot {
         // here both two half are sorted and we traverse
         // first half in reverse meaner because
         // first half contain negative element
-        int i = k - 1; // Initial index of first half
+        int i = k - 1; // last index of first half
         int j = k; // Initial index of second half
         int ind = 0; // Initial index of temp core.array
 

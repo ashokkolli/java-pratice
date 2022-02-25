@@ -7,56 +7,45 @@ import java.lang.*;
 
 public class TwoNumbersCloseToSum {
 
-        static void minAbsSumPair(int arr[], int n)
+    /*
+        Return the difference between the sum of the two integers and the target.
+        Example: Given array nums = [-1, 2, 1, -4], and target = 4.
+        The minimum difference is 1. (4 - (2 + 1) = 1).
+        Do it in O(nlogn) time complexity.
+    */
+    
+        static int minAbsSumPair(int[] nums, int target)
         {
-            // Variables to keep track of current sum and minimum sum
-            int sum, min_sum = 999999;
 
-            // left and right index variables
-            int l = 0, r = n-1;
-
-            // variable to keep track of the left and right pair for min_sum
-            int min_l = l, min_r = n-1;
-
-            /* Array should have at least two elements*/
-            if(n < 2)
-            {
-                System.out.println("Invalid Input");
-                return;
+            if (nums == null || nums.length == 0) {
+                return 0;
             }
 
-            /* Sort the elements */
-            Arrays.sort(arr);
+            Arrays.sort(nums);
+            int low = 0, high = nums.length - 1;
+            int diff = Integer.MAX_VALUE;
 
-            while(l < r)
-            {
-                sum = arr[l] + arr[r];
+            while (low < high) {
+                int sum = nums[low] + nums[high];
 
-                /*If abs(sum) is less then update the result items*/
-                if(Math.abs(sum) < Math.abs(min_sum))
-                {
-                    min_sum = sum;
-                    min_l = l;
-                    min_r = r;
+                if (sum > target) {
+                    high--;
+                } else {
+                    low++;
                 }
-                if(sum < 0)
-                    l++;
-                else
-                    r--;
+
+                diff = Math.min(diff, Math.abs(sum - target));
             }
 
-
-            System.out.println(" The two elements whose "+
-                    "sum is minimum are "+
-                    arr[min_l]+ " and "+arr[min_r]);
+            return diff;
         }
 
         // main function
         public static void main (String[] args)
         {
             int arr[] = {1, 60, -10, 70, -80, 85};
-            int n = arr.length;
-            minAbsSumPair(arr, n);
+            int target = 4;
+            minAbsSumPair(arr, target);
         }
 
 

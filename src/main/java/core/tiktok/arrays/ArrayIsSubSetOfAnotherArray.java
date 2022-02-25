@@ -32,16 +32,15 @@ public class ArrayIsSubSetOfAnotherArray {
 
 
     /* Return true if arr2[] is a subset of arr1[] */
-    static boolean isSubset(int arr1[],
-                            int arr2[], int m,
+    static boolean isSubset(int[] arr1,
+                            int[] arr2, int m,
                             int n)
     {
         HashSet<Integer> hset = new HashSet<>();
 
         // hset stores all the values of arr1
         for (int i = 0; i < m; i++) {
-            if (!hset.contains(arr1[i]))
-                hset.add(arr1[i]);
+            hset.add(arr1[i]);
         }
 
         // loop to check if all elements

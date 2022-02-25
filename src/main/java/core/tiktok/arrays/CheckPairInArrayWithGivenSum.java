@@ -17,13 +17,14 @@ public class CheckPairInArrayWithGivenSum {
     }
 
     public static List<Integer> getPair(int[] arr, int sum) {
-        List<Integer> list = new ArrayList<>();
+        List<Integer> list = new ArrayList<>(2);
         HashSet<Integer> set = new HashSet<>();
         for (int i = 0; i < arr.length; i++) {
             int temp = sum - arr[i];
             if (set.contains(temp)) {
                 list.add(temp);
                 list.add(arr[i]);
+                return list;
             }
             set.add(arr[i]);
         }

@@ -13,9 +13,9 @@ public class CountTotalPairs2Sum {
         countTotalPair2Sum(arr, sum);
     }
 
-    public static void countTotalPair2Sum(int[] arr, int sum) {
-
+    public static int countTotalPair2Sum(int[] arr, int sum) {
         Arrays.sort(arr);
+        int count =0;
         int l = 0;
         int r = arr.length - 1;
         while (l < r) {
@@ -28,5 +28,6 @@ public class CountTotalPairs2Sum {
                 l++;
             }
         }
+        return count;
     }
 }
